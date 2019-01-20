@@ -1,28 +1,27 @@
 package mmhinz.io.projeto1.entity;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Role {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	
-	private long id;
+	private String id;
 	private String name;
 	/**
 	 * @return the id
 	 */
-	public long getId() {
+	public String getId() {
 		return id;
 	}
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	/**
